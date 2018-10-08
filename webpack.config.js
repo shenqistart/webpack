@@ -29,6 +29,20 @@ module.exports={
                         insertAt:'top'
                     }
                 },'css-loader']
+            },{
+                test:/\.png|gif|svg$/,
+                // 从右向左的引入css引用，内联样式查到页面中去html-withimg-loader
+                // use:['file-loader']
+                use:{
+                    laoder:'file-loader',
+                    options:{
+                        outputpath:'image'
+                    }
+                }
+            },{
+                test:/\.html$/,
+                // 从右向左的引入css引用，内联样式查到页面中去
+                use:'html-withimg-loader'
             }
         ]
     },
