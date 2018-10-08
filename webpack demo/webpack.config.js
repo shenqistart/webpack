@@ -2,7 +2,7 @@ const path=require('path');
 console.log(path,'路径');
 
 module.exports={
-    // mode:'development',
+    mode:'development',
     entry:'./src/index.js',
     output:{
         path:path.resolve('dist'),
