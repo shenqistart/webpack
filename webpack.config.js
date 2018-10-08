@@ -17,6 +17,21 @@ module.exports={
         // 压缩
         compress:true,
     },
+    module:{
+        rules:[
+            {
+                test:/\.css$/,
+                // 从右向左的引入css引用，内联样式查到页面中去
+                use:[{
+                    loader:'style-loader',
+                // 就是将生成的style放到原有写的style之前
+                    options:{
+                        insertAt:'top'
+                    }
+                },'css-loader']
+            }
+        ]
+    },
     plugins:[
         // 插件都是实例
         new HtmlWebpackPlugin({
