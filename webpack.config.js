@@ -34,7 +34,7 @@ module.exports={
                 // 从右向左的引入css引用，内联样式查到页面中去html-withimg-loader
                 // use:['file-loader']
                 use:{
-                    laoder:'file-loader',
+                    loader:'file-loader',
                     options:{
                         outputpath:'image'
                     }
